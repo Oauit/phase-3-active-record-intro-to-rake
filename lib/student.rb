@@ -1,5 +1,10 @@
 class Student
-
+namespace :db do
+  desc 'migrate changes to your database'
+  task migrate: :environment 
+    Student.create_table 
+end
+end 
   # Remember, you can access your database connection anywhere in this class
   #  with DB[:conn]  
   
